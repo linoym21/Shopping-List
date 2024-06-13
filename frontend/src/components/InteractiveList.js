@@ -19,7 +19,7 @@ export default function InteractiveList() {
 useEffect(() => {
     async function fetchData() {
         try {
-            const response = await axios.get('http://localhost:3000/items');
+            const response = await axios.get('https://shopping-list-backend-a6vl.onrender.com/items');
             dispatch(  updateList(response.data));
                     } 
             catch (error) {
