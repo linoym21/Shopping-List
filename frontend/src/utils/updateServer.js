@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const decreaseItemQuantity = async (title, categoryTitle) => {
     try {
-        const response = await fetch('http://localhost:8000/items/decreaseQuantity', {
+        const response = await fetch('http://localhost:3000/items/decreaseQuantity', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ const decreaseItemQuantity = async (title, categoryTitle) => {
 };
 const increaseItemQuantity = async (title, categoryTitle) => {
     try {
-        const response = await fetch('http://localhost:8000/items/increaseQuantity', {
+        const response = await fetch('http://localhost:3000/items/increaseQuantity', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const deleteItemFromServer = async (title, categoryTitle) => {
             })
         };
        
-         await fetch('http://localhost:8000/items', requestOptions);
+         await fetch('http://localhost:3000/items', requestOptions);
         
        
     } catch (error) {
@@ -57,7 +57,7 @@ const deleteItemFromServer = async (title, categoryTitle) => {
 const addItemToServer = async (inputValue, category) => {
     try {
        
-      const response = await axios.post('http://localhost:8000/items', {
+      const response = await axios.post('http://localhost:3000/items', {
         title: inputValue,
         categoryTitle: category,
         quantity: 1 
