@@ -19,9 +19,10 @@ module.exports={
  // im not create category it is bulid in
 
    createCategory:(req,res)=>{
-        const {_id}=req.body;
+        const {title}=req.body;
         const category =new Category({
-            _id
+            _id:  new mongoose.Types.ObjectId(),
+            title
         });
 
         category.save().then(()=>{

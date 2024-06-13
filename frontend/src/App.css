@@ -1,0 +1,30 @@
+.custom-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6%;
+  margin-top: 5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .bottom-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-relative {
+      position: relative;
+  }
+}
+
+
+
+
